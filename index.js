@@ -14,9 +14,26 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
     } else if (!passwordPattern.test(password)) {
         alert('Invalid password. It must be at least 8 characters long, contain at least one letter and one number, and may include special characters.');
     } else {
-        alert('Login successful!');
+        ('Login successful!');
         
     }
 });
 
+
+//eye(visibility)
+
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var toggleButton = document.querySelector(".password-toggle img");
+    
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.src = "https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/640/eye-slash-128.png";
+      toggleButton.alt = "Hide password";
+    } else {
+      passwordInput.type = "password";
+      toggleButton.src = "https://cdn0.iconfinder.com/data/icons/interface-line-4/48/show_view_visible-128.png";
+      toggleButton.alt = "Show password";
+    }
+  }
 
